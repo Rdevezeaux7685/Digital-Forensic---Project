@@ -30,7 +30,7 @@
    >  Get-FileHash [] -Algorithm MD5
 
 4. **Start Analysis:**
-   - Initiate the analysis process and let Autopsy examine the contents of the "InCh12Randall.001" file.
+   - Initiate the analysis process and let Autopsy examine the contents of the [] file.
 
 ### Analysis
 
