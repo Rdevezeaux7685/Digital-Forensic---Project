@@ -73,6 +73,7 @@ In the **File Views/File Types/** one can see a lot of different informations, s
 ### 3.3 File Views and Types
 
 #### Web History
+
 contains the data of the different applications:
 
 1. Chrome : `/data/data/com.android.chrome/app_chrome/Default/History`
@@ -93,7 +94,9 @@ Looking Through the suspect **Web History** and **Web searches**, there seems to
 
 ![](/Evidences/messages.png)
 
-In the messages, one can see multiple phone number the suspect had communication with.Using filters to only show communication with a certain phone number, it is possible to see more easily the conversation the supect had. ![](/Evidences//15402993169.png)
+In the messages, one can see multiple phone number the suspect had communication with.Using filters to only show communication with a certain phone number, it is possible to see more easily the conversation the supect had. 
+
+![](/Evidences//15402993169.png)
 
 By creating a search query with the phone number, one can find all communication made with that person.![](/Evidences/search-phone-number.png)
 It seems that the person and the suspect met for a car sale.
@@ -101,6 +104,50 @@ It seems that the person and the suspect met for a car sale.
 I was also able to find the db file; this database contains all text messages. ![](/Evidences/telephony-db.png) 
 
 *The database was added to the evidences [discovery/database](/Evidences/databases/)*
+
+A 2nd database showed us that some images where send through a conversation: 
+![](/Evidences/0-message.png)
+By looking in the appropriate directory `/user_de/0/com.android.providers.telephony/app_parts/`, the pictures can be found. There are picture of a car.
+
+### Installed application
+
+Looking through the application, a first application looked suspicious. `thoughcrime.securesms`. After looking on the internet this is the application Signal. Nothing suspicious.
+
+![](/Evidences/thoughtcrime.png)
+
+Somme application:
+
+    com.orto.usa >  License Plate Recognition
+    com.napko.RealDash > best vehicle companion app for road trips
+    com.instantcheckmate.app> Instant Checkmate offers background checks 
+
+
+#### **Suspicious app:**
+
+> `com.flatfish.cal.privacy `
+
+Disguised as a secret calculator, HideX gallery vault & video lock is a stunning free video gallery vault, photo gallery lock, audio protector and privacy lock for your personal information and media files!! [Calculator (com.flatfish.cal.privacy) 3.5.17.4 APK Download](https://fr.apkshub.com/app/com.flatfish.cal.privacy)
+
+In the data of this application we can see that 2 other application's data where hidden
+
+- Catch cheating spouse
+- whatsapp
+
+![](/Evidences/fake-app.png)
+
+
+In the /Dump/data/data/com/flatfish.cal.privacy/cache.image_manager_disk_cache one suspicious picture was found. 
+
+![](/Evidences/secret-app/51e0876703e25c6ce5e459dd3cdda42171b3c30653a3f657af9db3bdb5db7c77.png)
+
+and this
+ ![](/Evidences/secret-app/message.png)
+
+After making a search with the term `cheating`. One can see that an application called "catching cheating spouse" was indeed installed on the mobile device.
+![](/Evidences/search-result.png)
+
+
+
 
 ## 4. Conclusion
 
