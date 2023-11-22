@@ -56,7 +56,7 @@ The zip of the evidence has been added as *ForensicLab8.zip*
 ## 3. Analysis
 
 ### 3.1 Device Information
-In `dump/system/build.pro` : This file reveals crucial details about a Samsung SM-N970U1 device running Android 11, including build type, security patch, and Knox version. Key specifics include the build fingerprint and build date (May 18, 2021). ![Device Information](/Discoveries/device-informations.png)
+In `dump/system/build.pro` : This file reveals crucial details about a Samsung SM-N970U1 device running Android 11, including build type, security patch, and Knox version. Key specifics include the build fingerprint and build date (May 18, 2021). ![Device Information](/Evidences/device-informations.png)
 
 ### 3.2 Credential Encrypted Directory
 The folder `/dump/data/system_ce/` is extremely important as it is the so-called "Credential Encrypted" directory, whose encryption key includes the user-specific password. And these files are certainly inaccessible to most apps, except those to which I grant root access
@@ -65,10 +65,10 @@ reference:
    - [Auditing Android Security](https://tech.michaelaltfield.net/2018/11/09/android-security-auditing-investigating-unauthorized-screenshots/)
 
 The file accounts_cd.db provides valuable information regarding accounts present on the mobile device, there is also a hashed password for the main Google account.
-![Accounts_ce](/Discoveries/accounts_ce.png)
+![Accounts_ce](/Evidences/accounts_ce.png). *The database was added to the evidences [discovery/database](/Evidences/databases/)*
 
 In the **File Views/File Types/** one can see a lot of different informations, such as pictures, videos, etc.
-![File Types](/Discoveries/FilesType.png)
+![File Types](/Evidences/FilesType.png)
 
 ### 3.3 File Views and Types
 
@@ -78,15 +78,29 @@ contains the data of the different applications:
 1. Chrome : `/data/data/com.android.chrome/app_chrome/Default/History`
 This file is a SQL database that contains the History of the Chrome Application. There one can find the history of key searched and URL visited.
 Nothing compromising in the suspect chrome History.
-![Chrome History](/Discoveries/history-google-chrome.png)
-![URL Google Chrome](/Discoveries/url-google-chrome.png)
+
+![Chrome History](/Evidences/history-google-chrome.png)
+![URL Google Chrome](/Evidences/url-google-chrome.png)
+
+*The databases where added to the evidences [discovery/database](/Evidences/databases/)*
 
 These information can also be found on the **Data artifacts** from Autopsy Analysis 
-![Data Artifacts](/Discoveries/Data-articafts.png)
+![Data Artifacts](/Evidences/Data-articafts.png)
 
 Looking Through the suspect **Web History** and **Web searches**, there seems to be no compromising searches or information there.
 
 ### 3.4 Texts and SMS
+
+![](/Evidences/messages.png)
+
+In the messages, one can see multiple phone number the suspect had communication with.Using filters to only show communication with a certain phone number, it is possible to see more easily the conversation the supect had. ![](/Evidences//15402993169.png)
+
+By creating a search query with the phone number, one can find all communication made with that person.![](/Evidences/search-phone-number.png)
+It seems that the person and the suspect met for a car sale.
+
+I was also able to find the db file; this database contains all text messages. ![](/Evidences/telephony-db.png) 
+
+*The database was added to the evidences [discovery/database](/Evidences/databases/)*
 
 ## 4. Conclusion
 
