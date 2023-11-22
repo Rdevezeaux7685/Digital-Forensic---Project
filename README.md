@@ -36,15 +36,40 @@ The zip of the evidence has been added as *ForensicLab8.zip*
 
 ### Analysis
 
-In dump/system/build.pro : This file reveals crucial details about a Samsung SM-N970U1 device running Android 11, including build type, security patch, and Knox version. Key specifics include the build fingerprint and build date (May 18, 2021). ![](/Discoveries/device-informations.png)
+#### Device information
+In `dump/system/build.pro` : This file reveals crucial details about a Samsung SM-N970U1 device running Android 11, including build type, security patch, and Knox version. Key specifics include the build fingerprint and build date (May 18, 2021). ![](/Discoveries/device-informations.png)
 
-The folder **/system_ce/** is extemely important as it is the so-called "Credential Encrypted" directory, whoose encryption key includes the user-specific password. And these files are certainly inaccessible to most apps, except those to which I grant root access
+#### `/dump/data/system_ce/`
+The folder `/dump/data/system_ce/` is extemely important as it is the so-called "Credential Encrypted" directory, whoose encryption key includes the user-specific password. And these files are certainly inaccessible to most apps, except those to which I grant root access
 reference: 
    - [direct-boot](https://developer.android.com/privacy-and-security/direct-boot)
    - [Auditing Android Security](https://tech.michaelaltfield.net/2018/11/09/android-security-auditing-investigating-unauthorized-screenshots/)
-By looking in the data/data files, one can find multiple applications; such as Instagram, Netflix, Snapchat, Venmo, Twitter, Whatsapp, Waze, etc. 
 
 
+The file accounts_cd.db provide valuable information regarding accounts present on the mobile device, there is also a hashed password for the main google account.
+![](/Discoveries/accounts_ce.png)
+
+In the **File Views/File Types/** one can see a lot of differents informations, such as pictures, videos, etc.
+
+![](/Discoveries/FilesType.png)
+
+#### Web history
+contains the data of the differents applications:
+
+1. Chrome : `/data/data/com.android.chrome/app_chrome/Default/History`
+This file is a sql database that contains the History of the Chrome Application. There one can find the history of key searched and url visited.
+Nothing compromising in the suspect chrome History.
+![](/Discoveries/history-google-chrome.png)
+![](/Discoveries/url-google-chrome.png)
+
+
+These information can also be found on the **Data artifacts** from Autopsy Analysis 
+
+![](/Discoveries/Data-articafts.png)
+
+Looking Through the suspect **Web History** and **Web searches**, there seems to be no compromising searches or information there.
+
+#### Texts and sms
 
 ## Results
 
