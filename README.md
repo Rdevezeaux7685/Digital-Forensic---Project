@@ -13,9 +13,11 @@
 - [3. Analysis](#3-analysis)
    - [3.1 Device Information](#31-device-information)
    - [3.2 Credential Encrypted Directory](#32-credential-encrypted-directory)
-   - [3.3 File Views and Types](#33-file-views-and-types)
+   - [3.3 Data Files](#33-datas-files)
    - [3.4 Web History](#34-web-history)
    - [3.5 Texts and SMS](#35-texts-and-sms)
+   - [3.6 Installed Applications](#36-installed-application)
+   - [3.7 Databases](#37-databases)
 - [4. Conclusion](#4-conclusion)
 
 ---
@@ -64,15 +66,16 @@ reference:
    - [direct-boot](https://developer.android.com/privacy-and-security/direct-boot)
    - [Auditing Android Security](https://tech.michaelaltfield.net/2018/11/09/android-security-auditing-investigating-unauthorized-screenshots/)
 
+### 3.3 Datas files
+
 The file accounts_cd.db provides valuable information regarding accounts present on the mobile device, there is also a hashed password for the main Google account.
 ![Accounts_ce](/Evidences/accounts_ce.png). *The database was added to the evidences [discovery/database](/Evidences/databases/)*
 
 In the **File Views/File Types/** one can see a lot of different informations, such as pictures, videos, etc.
 ![File Types](/Evidences/FilesType.png)
 
-### 3.3 File Views and Types
 
-#### Web History
+#### 3.4 Web History
 
 contains the data of the different applications:
 
@@ -90,7 +93,7 @@ These information can also be found on the **Data artifacts** from Autopsy Analy
 
 Looking Through the suspect **Web History** and **Web searches**, there seems to be no compromising searches or information there.
 
-### 3.4 Texts and SMS
+### 3.5 Texts and SMS
 
 ![](/Evidences/messages.png)
 
@@ -109,7 +112,7 @@ A 2nd database showed us that some images where send through a conversation:
 ![](/Evidences/0-message.png)
 By looking in the appropriate directory `/user_de/0/com.android.providers.telephony/app_parts/`, the pictures can be found. There are picture of a car.
 
-### Installed application
+### 3.6 Installed applications
 
 Looking through the application, a first application looked suspicious. `thoughcrime.securesms`. After looking on the internet this is the application Signal. Nothing suspicious.
 
@@ -122,7 +125,7 @@ Somme application:
     com.instantcheckmate.app> Instant Checkmate offers background checks 
 
 
-#### **Suspicious app:**
+#### 3.6.1 **Suspicious app:**
 
 > `com.flatfish.cal.privacy `
 
@@ -147,7 +150,7 @@ After making a search with the term `cheating`. One can see that an application 
 ![](/Evidences/search-result.png)
 
 
-### **suspicious application**
+### 3.6.2 **suspicious application**
 
 `app.greyshirts.sslcapture`
 
@@ -157,13 +160,14 @@ This application seems to be capturing data acting like a man-in-the-middle
 
 
 
-### Databases:
+### 3.7 Databases:
 
 A few databases where added to the evidences files.
 
 Some communication databases can be found here. 
 ![](/Evidences/databses.png) 
 All of these databases either comes from Whatsapp or the Telephonie application as already covered in the [3.4 Text and sms](#34-texts-and-sms)
+
 ## 4. Conclusion
 
 
