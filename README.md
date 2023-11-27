@@ -24,12 +24,16 @@
 
 ## 1. Project Overview
 
+The objective of this project is to conduct an analysis of digital evidence utilizing digital forensic tools. Specifically, Autopsy will be utilized for the analysis of the received evidence.
+
+The evidence in question originates from a mobile device belonging to a suspect.  A search warrant has been obtained for this mobile device in relation to a drug dealing case. The purpose of the analysis is to identify any evidence that may establish a connection between the suspect and the alleged crime. 
+
 ## 1.1 Project Description
 
 **Source:**
 
-The evidence files come from a Forensic Analysis class from my home institution Howest University. This is a Mobile image. 
-The zip of the evidence has been added as *ForensicLab8.zip*
+The evidence files come from a *Forensic Analysis* class from my home institution *Howest University*. This is an image from a mobile device. 
+The zip of the evidence has been added as *ForensicLab8.zip* (this had to be removed due to the size of the file)
 
 ## 2. Tools Used
 
@@ -159,7 +163,6 @@ This application seems to be capturing data acting like a man-in-the-middle
 ![](/Evidences/sslcapture.png)
 
 
-
 ### 3.7 Databases:
 
 A few databases where added to the evidences files.
@@ -170,7 +173,15 @@ All of these databases either comes from Whatsapp or the Telephonie application 
 
 ## 4. Conclusion
 
+The forensic analysis of the mobile device provided insights into the suspect's activities. The examination of device information, data files, web history, texts and SMS, and installed applications revealed details about the user's interactions.
 
+Key findings include the identification of the mobile device as a Samsung SM-N970U1 running Android 11, along with evidence of communication related to a car sale. The suspect's web history and searches did not reveal compromising information nor the various pictures founded.
+
+However, the analysis uncovered potentially concerning applications, such as a disguised calculator app concealing other application in it and an application capturing data as a man-in-the-middle.
+
+Text message analysis exposed communications with multiple phone numbers, including discussions related to a car sale. The investigation also revealed suspicious applications, one associated with catching cheating spouses and another capturing SSL data.
+
+In summary, while the mobile forensic analysis using Autopsy provided information about the suspect's activities, it did not yield hard proof of drug dealing. The evidence gathered sheds light on various interactions and potentially suspicious behavior, but definitive evidence linking the suspect to drug-related activities was not found.
 
 ---
 
