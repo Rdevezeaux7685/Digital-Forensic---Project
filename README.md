@@ -183,6 +183,17 @@ Text message analysis exposed communications with multiple phone numbers, includ
 
 In summary, while the mobile forensic analysis using Autopsy provided information about the suspect's activities, it did not yield hard proof of drug dealing. The evidence gathered sheds light on various interactions and potentially suspicious behavior, but definitive evidence linking the suspect to drug-related activities was not found.
 
+
+> Did things work as expected? 
+   The entire project went quite well, as the evidence was really big I had to wait a lot for autopsy to start the project after adding the evidence.
+
+> What challenges did you encounter? 
+   Not much, just the amount of information available something make my workflow a bit messy.
+
+> Do you recommend this tool / approach? 
+   I would, autopsy is a great tool, specially for mobile device, there were a lot of information directly available from the *Data Artifacts* ![](/Evidences/dataartifacts.png)
+
+
 ---
 
 **Author: Romane Devezeaux De Lavergne**
